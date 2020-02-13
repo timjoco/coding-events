@@ -26,8 +26,9 @@ public class EventController {
         return "events/index";
     }
 
+    // Lives at /events/create
     @GetMapping("create")
-    public String displayCreateEventForm(Model model) {
+    public String renderCreateEventForm(Model model) {
         model.addAttribute("title", "Create Event");
         return "events/create";
     }
@@ -37,5 +38,6 @@ public class EventController {
         events.add(eventName);
         return "redirect:";
     }
+
 
 }
